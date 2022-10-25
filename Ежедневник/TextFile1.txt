@@ -1,0 +1,40 @@
+internal class Pizza
+    {
+        public string Name;
+        public int Diameter;
+        public string Testo;
+        public int Ostrota;
+        public double Kkal;
+    }
+    static void Main(string[] args)
+    {
+        //тип данных название = значение - простой
+        Pizza margarita = new Pizza();
+        margarita.Name = "Маргарита";
+        margarita.Diameter = 28;
+        margarita.Testo = "Тонкое";
+        margarita.Kkal = 1200;
+        margarita.Ostrota = 1;
+        //
+        Pizza Havai = new Pizza();
+        Havai.Name = "Гавайская";
+        Havai.Diameter = 38;
+        Havai.Testo = "Традиционное";
+
+        List<Pizza> menu = new List<Pizza>();
+        menu.Add(margarita);
+        menu.Add(Havai);
+
+        foreach (Pizza pizza in menu)
+        {
+            Console.WriteLine("____________");
+            Console.WriteLine(pizza.Name);
+            Console.WriteLine(pizza.Diameter);
+            Console.WriteLine(pizza.Testo);
+            Console.WriteLine(pizza.Ostrota);
+            Console.WriteLine(pizza.Kkal);
+            Console.WriteLine("____________");
+        }
+        //DateTime - для ежедневника тип данных
+
+    }
